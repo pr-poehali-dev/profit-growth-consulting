@@ -41,7 +41,7 @@ export default function Index() {
               <p className="text-lg md:text-xl text-white/90 font-semibold mb-6">
                 своими руками
               </p>
-              <p className="text-sm md:text-base text-white/95 leading-relaxed">
+              <p className="text-base md:text-lg text-white/95 leading-relaxed">
                 Только практика. Никакой воды.<br />
                 Приёмы, методы и секретные фишки<br />
                 от предпринимателя со стажем 27 лет
