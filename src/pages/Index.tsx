@@ -47,16 +47,8 @@ export default function Index() {
       </header>
 
       <main className="pt-20">
-        <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden">
-          <div 
-            className="absolute inset-0 opacity-40"
-            style={{
-              backgroundImage: `url('https://cdn.poehali.dev/files/60572ba6-1d2d-47a9-8fa4-6905744ef9d0.jpg')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="min-h-[80vh] flex items-center justify-center">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                 Как удвоить прибыль магазина
