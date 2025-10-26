@@ -66,7 +66,7 @@ export default function Index() {
           </div>
         </nav>
 
-        <section id="book" className="py-24 bg-accent/10">
+        <section id="book" className="pt-8 pb-24 bg-accent/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
