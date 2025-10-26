@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 
 export default function Index() {
@@ -20,6 +21,118 @@ export default function Index() {
   });
 
   const [isBookFormOpen, setIsBookFormOpen] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+
+  const articles = {
+    mistakes: {
+      title: '10 ошибок владельцев магазинов, которые убивают продажи',
+      content: `Разбираем самые распространённые ошибки владельцев розничных магазинов и показываем, как их исправить.
+
+**1. Отсутствие обучения персонала**
+Большинство владельцев думают, что продавец сам научится продавать. Это не так. Без системного обучения вы теряете 30-50% потенциальной прибыли.
+
+**2. Игнорирование повторных продаж**
+Привлечь нового клиента в 5-7 раз дороже, чем продать существующему. Программа лояльности окупается за 2-3 месяца.
+
+**3. Неправильное ценообразование**
+Многие ставят цены "как у конкурентов" или "себестоимость + 30%". Правильное ценообразование учитывает ценность для клиента.
+
+**4. Отсутствие стандартов обслуживания**
+Каждый продавец работает по-своему. Результат — непредсказуемый сервис и потеря клиентов.
+
+**5. Игнорирование аналитики**
+Не знаете средний чек, конверсию, самые продаваемые товары? Вы управляете бизнесом вслепую.
+
+Продолжение статьи доступно в полной версии книги.`
+    },
+    training: {
+      title: 'Как обучить продавцов продавать в 2 раза больше',
+      content: `Пошаговая система обучения персонала, которая увеличивает продажи минимум на 40%.
+
+**Шаг 1. Диагностика текущего уровня**
+Проведите тайную покупку. Запишите, как работают продавцы сейчас. Выявите слабые места.
+
+**Шаг 2. Создайте скрипты продаж**
+Не импровизация, а чёткие алгоритмы для типовых ситуаций. Скрипты должны быть гибкими, но структурированными.
+
+**Шаг 3. Обучение через ролевые игры**
+Теория без практики не работает. Отрабатывайте скрипты в безопасной среде до автоматизма.
+
+**Шаг 4. Система наставничества**
+Лучшие продавцы обучают новичков. Это мотивирует обе стороны и передаёт корпоративную культуру.
+
+**Шаг 5. Постоянный контроль качества**
+Еженедельные разборы реальных продаж. Что сработало? Что можно улучшить?
+
+**Шаг 6. Мотивация и геймификация**
+Связывайте бонусы с конкретными показателями. Делайте результаты видимыми для всей команды.
+
+Полная методика с шаблонами и чек-листами — в книге "35 способов получить клиентов без затрат".`
+    },
+    loyalty: {
+      title: 'Программа лояльности: делаем правильно',
+      content: `Программа лояльности может стать мощным инструментом роста или бесполезной тратой денег. Разница — в деталях.
+
+**Что НЕ работает:**
+- Скидка 5% после 10 покупок (слишком маленькая мотивация)
+- Сложные условия начисления бонусов (клиенты не понимают)
+- Одинаковые бонусы для всех (нет персонализации)
+
+**Что работает:**
+
+**1. Мгновенная ценность**
+Дайте бонус сразу при регистрации. Клиент должен почувствовать выгоду в первые 5 минут.
+
+**2. Понятная механика**
+"Потратил 1000₽ — получил 100 бонусов = 100₽ к следующей покупке". Просто и ясно.
+
+**3. Уровни и статусы**
+Бронза → Серебро → Золото. Людям нравится повышать статус. Каждый уровень даёт больше привилегий.
+
+**4. Эксклюзивность**
+Закрытые распродажи только для участников программы. Ранний доступ к новинкам.
+
+**5. Эмоциональная связь**
+Поздравления с днём рождения + подарок. Персональные предложения на основе истории покупок.
+
+**6. Напоминания**
+SMS/Email: "У вас 500 бонусов, сгорают через 5 дней". Это возвращает клиентов в магазин.
+
+Примеры успешных программ лояльности с цифрами ROI — в полной версии материалов.`
+    },
+    noads: {
+      title: '5 способов привлечь клиентов без рекламы',
+      content: `Реклама дорогая и не всегда эффективна. Есть способы привлечения клиентов, которые работают лучше и стоят дешевле.
+
+**1. Партнёрский маркетинг**
+Найдите бизнесы с той же аудиторией, но без конкуренции. Пример: магазин детской одежды + детская парикмахерская.
+
+Схема: Вы даёте скидку 10% клиентам партнёра, партнёр — вашим клиентам. Оба получаете новых покупателей бесплатно.
+
+**2. Реферальная программа**
+"Приведи друга — получи 500₽ на счёт". Клиент становится вашим продавцом.
+
+Важно: Бонус должен получить и тот, кто привёл, и тот, кого привели. Иначе не работает.
+
+**3. Локальные активности**
+Мастер-классы, презентации, участие в районных мероприятиях. Вы становитесь частью сообщества.
+
+Пример: Магазин спорттоваров проводит бесплатную зарядку в парке по субботам. 20-30 новых клиентов каждую неделю.
+
+**4. Контент-маркетинг**
+Полезные статьи, видео, чек-листы по вашей теме. Люди находят вас через поиск, когда ищут решение проблемы.
+
+**5. Сарафанное радио (но правильное)**
+Просто хороший сервис не создаёт сарафанное радио. Нужен WOW-эффект.
+
+Примеры:
+- Неожиданный подарок к покупке
+- Решение проблемы клиента сверх ожиданий
+- Персональное внимание и забота
+
+Каждый способ подробно разобран с примерами внедрения в книге "35 способов получить клиентов без затрат".`
+    }
+  };
 
   const handleBookDownload = (e: React.FormEvent) => {
     e.preventDefault();
@@ -206,7 +319,7 @@ export default function Index() {
                 Читайте о проверенных методах роста бизнеса
               </p>
               <div className="space-y-6">
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => setSelectedArticle('mistakes')}>
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
                       <Icon name="FileText" size={40} className="text-accent" />
@@ -218,13 +331,13 @@ export default function Index() {
                       <p className="text-sm text-muted-foreground mb-3">
                         Разбираем типичные ошибки и показываем, как их исправить. На примерах из практики.
                       </p>
-                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                      <span className="text-accent hover:underline text-sm font-medium">
                         Читать далее →
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => setSelectedArticle('training')}>
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
                       <Icon name="FileText" size={40} className="text-accent" />
@@ -236,13 +349,13 @@ export default function Index() {
                       <p className="text-sm text-muted-foreground mb-3">
                         Пошаговая система обучения персонала. Скрипты, чек-листы и контроль результатов.
                       </p>
-                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                      <span className="text-accent hover:underline text-sm font-medium">
                         Читать далее →
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => setSelectedArticle('loyalty')}>
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
                       <Icon name="FileText" size={40} className="text-accent" />
@@ -254,13 +367,13 @@ export default function Index() {
                       <p className="text-sm text-muted-foreground mb-3">
                         Как создать программу лояльности, которая приносит повторные продажи и увеличивает чек.
                       </p>
-                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                      <span className="text-accent hover:underline text-sm font-medium">
                         Читать далее →
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </Card>
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => setSelectedArticle('noads')}>
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
                       <Icon name="FileText" size={40} className="text-accent" />
@@ -272,9 +385,9 @@ export default function Index() {
                       <p className="text-sm text-muted-foreground mb-3">
                         Партнёрства, кросс-маркетинг, локальные активности — работающие схемы с примерами.
                       </p>
-                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                      <span className="text-accent hover:underline text-sm font-medium">
                         Читать далее →
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </Card>
@@ -282,6 +395,37 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        <Dialog open={selectedArticle !== null} onOpenChange={() => setSelectedArticle(null)}>
+          <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">
+                {selectedArticle && articles[selectedArticle as keyof typeof articles].title}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="prose prose-sm max-w-none mt-4">
+              {selectedArticle && articles[selectedArticle as keyof typeof articles].content.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="mb-4 whitespace-pre-line">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-accent/10 rounded-lg">
+              <p className="text-sm text-center mb-3">
+                Хотите получить полную версию всех материалов?
+              </p>
+              <a href="#book">
+                <Button 
+                  onClick={() => setSelectedArticle(null)}
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                >
+                  <Icon name="Download" size={20} className="mr-2" />
+                  Скачать книгу бесплатно
+                </Button>
+              </a>
+            </div>
+          </DialogContent>
+        </Dialog>
 
         <section id="results" className="py-24 bg-card">
           <div className="container mx-auto px-4">
