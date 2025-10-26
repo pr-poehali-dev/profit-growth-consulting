@@ -31,18 +31,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen">
-      <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-center">
-          <div className="flex gap-8">
-            <a href="#services" className="text-sm hover:text-accent transition-colors">Услуги</a>
-            <a href="#results" className="text-sm hover:text-accent transition-colors">Результаты</a>
-            <a href="#about" className="text-sm hover:text-accent transition-colors">Обо мне</a>
-            <a href="#contact" className="text-sm hover:text-accent transition-colors">Контакты</a>
-          </div>
-        </nav>
-      </header>
-
-      <main className="pt-20">
+      <main>
         <section className="min-h-[80vh] flex items-center justify-center">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -356,6 +345,17 @@ export default function Index() {
           </div>
         </section>
       </main>
+
+      <nav className="bg-card border-t border-border py-6">
+        <div className="container mx-auto px-4 flex items-center justify-center">
+          <div className="flex gap-8">
+            <a href="#services" className="text-sm hover:text-accent transition-colors">Услуги</a>
+            <a href="#results" className="text-sm hover:text-accent transition-colors">Результаты</a>
+            <a href="#about" className="text-sm hover:text-accent transition-colors">Обо мне</a>
+            <a href="#contact" className="text-sm hover:text-accent transition-colors">Контакты</a>
+          </div>
+        </div>
+      </nav>
 
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4">
