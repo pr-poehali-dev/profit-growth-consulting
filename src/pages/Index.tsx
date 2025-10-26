@@ -35,7 +35,7 @@ export default function Index() {
         <section className="bg-sky-500 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3 leading-tight text-white">
+              <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight text-white">
                 Как удвоить прибыль магазина
               </h1>
               <p className="text-lg md:text-xl text-white/90 font-semibold mb-6">
