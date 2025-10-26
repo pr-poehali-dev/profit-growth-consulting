@@ -102,27 +102,10 @@ export default function Index() {
                       <form onSubmit={handleBookDownload} className="space-y-4 animate-fade-in">
                         <div>
                           <Input
-                            placeholder="Ваше имя"
-                            value={bookFormData.name}
-                            onChange={(e) => setBookFormData({ ...bookFormData, name: e.target.value })}
-                            required
-                          />
-                        </div>
-                        <div>
-                          <Input
                             type="email"
                             placeholder="Email для получения книги"
                             value={bookFormData.email}
                             onChange={(e) => setBookFormData({ ...bookFormData, email: e.target.value })}
-                            required
-                          />
-                        </div>
-                        <div>
-                          <Input
-                            type="tel"
-                            placeholder="Телефон"
-                            value={bookFormData.phone}
-                            onChange={(e) => setBookFormData({ ...bookFormData, phone: e.target.value })}
                             required
                           />
                         </div>
