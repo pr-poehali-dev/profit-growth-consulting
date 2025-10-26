@@ -80,9 +80,11 @@ export default function Index() {
               <Card className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="flex-shrink-0">
-                    <div className="w-48 h-64 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
-                      <Icon name="BookOpen" size={64} className="text-accent" />
-                    </div>
+                    <img 
+                      src="https://cdn.poehali.dev/files/50545208-cfc4-4de4-9ef8-48f2f1ac35eb.jpg" 
+                      alt="35 способов получить клиентов без затрат"
+                      className="w-48 h-auto rounded-lg shadow-lg"
+                    />
                   </div>
                   <form onSubmit={handleBookDownload} className="flex-1 space-y-4 w-full">
                     <div>
