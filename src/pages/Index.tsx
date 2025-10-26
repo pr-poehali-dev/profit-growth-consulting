@@ -32,15 +32,22 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <main>
-        <section className="min-h-[80vh] flex items-center justify-center">
+        <section className="bg-sky-400 py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-3 leading-tight text-white">
                 Как удвоить прибыль магазина
               </h1>
-              <p className="text-lg md:text-xl mb-3 text-muted-foreground font-semibold">
+              <p className="text-lg md:text-xl text-white/90 font-semibold">
                 своими руками
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <p className="text-base md:text-lg mb-6 max-w-2xl mx-auto">
                 Привлечение покупателей. Рост продаж
               </p>
