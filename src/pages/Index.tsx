@@ -32,17 +32,13 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold tracking-tight">БизнесРост</div>
-          <div className="hidden md:flex gap-8">
+        <nav className="container mx-auto px-4 py-4 flex items-center justify-center">
+          <div className="flex gap-8">
             <a href="#services" className="text-sm hover:text-accent transition-colors">Услуги</a>
             <a href="#results" className="text-sm hover:text-accent transition-colors">Результаты</a>
             <a href="#about" className="text-sm hover:text-accent transition-colors">Обо мне</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Контакты</a>
           </div>
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Консультация
-          </Button>
         </nav>
       </header>
 
