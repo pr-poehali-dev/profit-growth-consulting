@@ -32,14 +32,19 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <main>
-        <section className="bg-sky-400 py-16">
+        <section className="bg-sky-500 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-3 leading-tight text-white">
                 Как удвоить прибыль магазина
               </h1>
-              <p className="text-lg md:text-xl text-white/90 font-semibold">
+              <p className="text-lg md:text-xl text-white/90 font-semibold mb-6">
                 своими руками
+              </p>
+              <p className="text-sm md:text-base text-white/95 leading-relaxed">
+                Только практика. Никакой воды.<br />
+                Приёмы, методы и секретные фишки<br />
+                от предпринимателя со стажем 27 лет
               </p>
             </div>
           </div>
@@ -48,12 +53,8 @@ export default function Index() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <p className="text-base md:text-lg mb-6 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto">
                 Привлечение покупателей. Рост продаж
-              </p>
-              <p className="text-sm md:text-base mb-8 text-muted-foreground">
-                Приёмы, методы и секретные фишки<br />
-                от предпринимателя со стажем 27 лет
               </p>
               <a href="#book">
                 <Button 
