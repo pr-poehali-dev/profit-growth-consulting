@@ -129,6 +129,160 @@ export default function Index() {
           </div>
         </section>
 
+        <section id="video" className="py-24 bg-card">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Видео о методах увеличения продаж
+              </h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Практические советы и разборы реальных кейсов
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="aspect-video bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
+                    <Icon name="Play" size={64} className="text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">
+                      Как удвоить средний чек
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      5 проверенных техник увеличения среднего чека без давления на клиента
+                    </p>
+                  </div>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="aspect-video bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
+                    <Icon name="Play" size={64} className="text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">
+                      Работа с возражениями
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Как превращать сомнения клиентов в покупки
+                    </p>
+                  </div>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="aspect-video bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
+                    <Icon name="Play" size={64} className="text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">
+                      Мотивация персонала
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Система KPI и бонусов, которая реально работает
+                    </p>
+                  </div>
+                </Card>
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="aspect-video bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
+                    <Icon name="Play" size={64} className="text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">
+                      Привлечение клиентов
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Бюджетные способы привлечения покупателей в магазин
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="articles" className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Статьи и полезные материалы
+              </h2>
+              <p className="text-center text-muted-foreground mb-12">
+                Читайте о проверенных методах роста бизнеса
+              </p>
+              <div className="space-y-6">
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                      <Icon name="FileText" size={40} className="text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        10 ошибок владельцев магазинов, которые убивают продажи
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Разбираем типичные ошибки и показываем, как их исправить. На примерах из практики.
+                      </p>
+                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                        Читать далее →
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                      <Icon name="FileText" size={40} className="text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        Как обучить продавцов продавать в 2 раза больше
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Пошаговая система обучения персонала. Скрипты, чек-листы и контроль результатов.
+                      </p>
+                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                        Читать далее →
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                      <Icon name="FileText" size={40} className="text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        Программа лояльности: делаем правильно
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Как создать программу лояльности, которая приносит повторные продажи и увеличивает чек.
+                      </p>
+                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                        Читать далее →
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-6">
+                    <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                      <Icon name="FileText" size={40} className="text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        5 способов привлечь клиентов без рекламы
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Партнёрства, кросс-маркетинг, локальные активности — работающие схемы с примерами.
+                      </p>
+                      <a href="#" className="text-accent hover:underline text-sm font-medium">
+                        Читать далее →
+                      </a>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="results" className="py-24 bg-card">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
