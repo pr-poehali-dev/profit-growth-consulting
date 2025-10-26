@@ -19,6 +19,8 @@ export default function Index() {
     phone: ''
   });
 
+  const [isBookFormOpen, setIsBookFormOpen] = useState(false);
+
   const handleBookDownload = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Book download requested:', bookFormData);
@@ -84,45 +86,60 @@ export default function Index() {
                       className="w-48 h-auto rounded-lg shadow-lg"
                     />
                   </div>
-                  <form onSubmit={handleBookDownload} className="flex-1 space-y-4 w-full">
-                    <div>
-                      <Input
-                        placeholder="Ваше имя"
-                        value={bookFormData.name}
-                        onChange={(e) => setBookFormData({ ...bookFormData, name: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="email"
-                        placeholder="Email для получения книги"
-                        value={bookFormData.email}
-                        onChange={(e) => setBookFormData({ ...bookFormData, email: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="tel"
-                        placeholder="Телефон"
-                        value={bookFormData.phone}
-                        onChange={(e) => setBookFormData({ ...bookFormData, phone: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                      size="lg"
-                    >
-                      <Icon name="Download" size={20} className="mr-2" />
-                      Скачать книгу бесплатно
-                    </Button>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Отправляя форму, вы соглашаетесь с политикой конфиденциальности
-                    </p>
-                  </form>
+                  <div className="flex-1 w-full">
+                    {!isBookFormOpen ? (
+                      <div className="text-center">
+                        <Button 
+                          onClick={() => setIsBookFormOpen(true)}
+                          className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                          size="lg"
+                        >
+                          <Icon name="Download" size={20} className="mr-2" />
+                          Скачать книгу бесплатно
+                        </Button>
+                      </div>
+                    ) : (
+                      <form onSubmit={handleBookDownload} className="space-y-4 animate-fade-in">
+                        <div>
+                          <Input
+                            placeholder="Ваше имя"
+                            value={bookFormData.name}
+                            onChange={(e) => setBookFormData({ ...bookFormData, name: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div>
+                          <Input
+                            type="email"
+                            placeholder="Email для получения книги"
+                            value={bookFormData.email}
+                            onChange={(e) => setBookFormData({ ...bookFormData, email: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div>
+                          <Input
+                            type="tel"
+                            placeholder="Телефон"
+                            value={bookFormData.phone}
+                            onChange={(e) => setBookFormData({ ...bookFormData, phone: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <Button 
+                          type="submit" 
+                          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                          size="lg"
+                        >
+                          <Icon name="Download" size={20} className="mr-2" />
+                          Скачать книгу бесплатно
+                        </Button>
+                        <p className="text-xs text-muted-foreground text-center">
+                          Отправляя форму, вы соглашаетесь с политикой конфиденциальности
+                        </p>
+                      </form>
+                    )}
+                  </div>
                 </div>
               </Card>
             </div>
