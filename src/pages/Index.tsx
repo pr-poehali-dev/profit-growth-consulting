@@ -32,7 +32,7 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <main>
-        <section className="bg-sky-500 py-16">
+        <section className="bg-sky-500 py-6">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl font-bold mb-3 leading-tight text-white">
