@@ -66,24 +66,6 @@ export default function Index() {
           </div>
         </nav>
 
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto">
-                Привлечение покупателей. Рост продаж
-              </p>
-              <a href="#book">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 py-5 rounded-full"
-                >
-                  Получить бесплатную книгу
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section id="book" className="py-24 bg-accent/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
