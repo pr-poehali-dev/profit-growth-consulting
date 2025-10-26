@@ -13,6 +13,17 @@ export default function Index() {
     message: ''
   });
 
+  const [bookFormData, setBookFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+
+  const handleBookDownload = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Book download requested:', bookFormData);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
@@ -47,25 +58,88 @@ export default function Index() {
           />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
                 Как удвоить прибыль магазина
               </h1>
-              <p className="text-xl md:text-2xl mb-4 text-muted-foreground font-semibold">
+              <p className="text-lg md:text-xl mb-3 text-muted-foreground font-semibold">
                 своими руками
               </p>
-              <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg mb-6 max-w-2xl mx-auto">
                 Привлечение покупателей. Рост продаж
               </p>
-              <p className="text-base md:text-lg mb-12 text-muted-foreground">
+              <p className="text-sm md:text-base mb-8 text-muted-foreground">
                 Приёмы, методы и секретные фишки<br />
                 от предпринимателя со стажем 27 лет
               </p>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 rounded-full"
-              >
-                Получить бесплатную книгу
-              </Button>
+              <a href="#book">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 py-5 rounded-full"
+                >
+                  Получить бесплатную книгу
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="book" className="py-24 bg-accent/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Скачай бесплатно книгу
+              </h2>
+              <p className="text-center text-lg text-muted-foreground mb-8">
+                "35 способов получить клиентов без затрат"
+              </p>
+              <Card className="p-8">
+                <div className="flex flex-col md:flex-row gap-8 items-center">
+                  <div className="flex-shrink-0">
+                    <div className="w-48 h-64 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                      <Icon name="BookOpen" size={64} className="text-accent" />
+                    </div>
+                  </div>
+                  <form onSubmit={handleBookDownload} className="flex-1 space-y-4 w-full">
+                    <div>
+                      <Input
+                        placeholder="Ваше имя"
+                        value={bookFormData.name}
+                        onChange={(e) => setBookFormData({ ...bookFormData, name: e.target.value })}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="email"
+                        placeholder="Email для получения книги"
+                        value={bookFormData.email}
+                        onChange={(e) => setBookFormData({ ...bookFormData, email: e.target.value })}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="tel"
+                        placeholder="Телефон"
+                        value={bookFormData.phone}
+                        onChange={(e) => setBookFormData({ ...bookFormData, phone: e.target.value })}
+                        required
+                      />
+                    </div>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      size="lg"
+                    >
+                      <Icon name="Download" size={20} className="mr-2" />
+                      Скачать книгу бесплатно
+                    </Button>
+                    <p className="text-xs text-muted-foreground text-center">
+                      Отправляя форму, вы соглашаетесь с политикой конфиденциальности
+                    </p>
+                  </form>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
