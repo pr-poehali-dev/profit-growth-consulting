@@ -50,6 +50,22 @@ export default function Index() {
           </div>
         </section>
 
+        <nav className="bg-card border-b border-border py-4">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-center gap-8">
+              <a href="#book" className="text-base font-medium hover:text-accent transition-colors">
+                Скачать
+              </a>
+              <a href="#video" className="text-base font-medium hover:text-accent transition-colors">
+                Смотреть
+              </a>
+              <a href="#articles" className="text-base font-medium hover:text-accent transition-colors">
+                Читать
+              </a>
+            </div>
+          </div>
+        </nav>
+
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
