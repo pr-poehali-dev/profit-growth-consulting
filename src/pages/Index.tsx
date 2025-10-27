@@ -134,9 +134,31 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
     }
   };
 
-  const handleBookDownload = (e: React.FormEvent) => {
+  const handleBookDownload = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Book download requested:', bookFormData);
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/f40e43fc-4a13-468f-8686-75b97822d6bc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookFormData)
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        alert('Письмо со ссылкой на книгу отправлено на ваш email!');
+        setIsBookFormOpen(false);
+        setBookFormData({ name: '', email: '', phone: '' });
+      } else {
+        alert('Ошибка отправки: ' + (data.error || 'Попробуйте позже'));
+      }
+    } catch (error) {
+      alert('Ошибка сети. Проверьте подключение и попробуйте снова.');
+      console.error('Error:', error);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
