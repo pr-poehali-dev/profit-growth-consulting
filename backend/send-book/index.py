@@ -118,6 +118,10 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
                 server.login(smtp_user, smtp_password)
                 server.send_message(msg)
+        elif smtp_port == 25:
+            with smtplib.SMTP(smtp_host, smtp_port) as server:
+                server.login(smtp_user, smtp_password)
+                server.send_message(msg)
         else:
             with smtplib.SMTP(smtp_host, smtp_port) as server:
                 server.starttls()
