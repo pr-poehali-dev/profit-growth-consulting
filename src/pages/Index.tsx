@@ -240,11 +240,28 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
                       <form onSubmit={handleBookDownload} className="space-y-4 animate-fade-in">
                         <div>
                           <Input
+                            type="text"
+                            placeholder="Ваше имя"
+                            value={bookFormData.name}
+                            onChange={(e) => setBookFormData({ ...bookFormData, name: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div>
+                          <Input
                             type="email"
                             placeholder="Email для получения книги"
                             value={bookFormData.email}
                             onChange={(e) => setBookFormData({ ...bookFormData, email: e.target.value })}
                             required
+                          />
+                        </div>
+                        <div>
+                          <Input
+                            type="tel"
+                            placeholder="Телефон (необязательно)"
+                            value={bookFormData.phone}
+                            onChange={(e) => setBookFormData({ ...bookFormData, phone: e.target.value })}
                           />
                         </div>
                         <Button 
@@ -253,7 +270,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
                           size="lg"
                         >
                           <Icon name="Download" size={20} className="mr-2" />
-                          Скачать книгу бесплатно
+                          Получить книгу на email
                         </Button>
                         <p className="text-xs text-muted-foreground text-center">
                           Отправляя форму, вы соглашаетесь с политикой конфиденциальности
