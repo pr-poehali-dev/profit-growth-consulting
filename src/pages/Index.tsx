@@ -177,6 +177,9 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
               <a href="#articles" className="text-base font-medium hover:text-accent transition-colors">
                 Читать
               </a>
+              <a href="#footer-menu" className="text-base font-medium hover:text-accent transition-colors">
+                Меню
+              </a>
             </div>
           </div>
         </nav>
@@ -652,7 +655,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
         </section>
       </main>
 
-      <nav className="bg-card border-t border-border py-6">
+      <nav id="footer-menu" className="bg-card border-t border-border py-6">
         <div className="container mx-auto px-4 flex items-center justify-center">
           <div className="flex gap-8">
             <a href="#services" className="text-sm hover:text-accent transition-colors">Услуги</a>
