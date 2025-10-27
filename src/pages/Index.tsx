@@ -172,7 +172,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
         <section className="bg-sky-500 py-6">
           <div className="container mx-auto px-4">
             <div className="text-left mb-4">
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-yellow-300">
                 BizConsulting2.ru
               </h2>
             </div>
