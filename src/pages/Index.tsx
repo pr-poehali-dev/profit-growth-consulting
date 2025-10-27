@@ -158,7 +158,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
               </p>
               <p className="text-base md:text-lg text-white/95 leading-relaxed">
                 Только практика. Никакой воды.<br />
-                Приёмы, методы и секретные фишки<br />
+                <span className="font-bold">Приёмы, методы и секретные фишки</span><br />
                 от предпринимателя со стажем 27 лет
               </p>
             </div>
