@@ -720,7 +720,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
             <div>
               <h3 className="text-xl font-bold mb-4">BizConsulting2.ru</h3>
               <p className="text-sm opacity-80">
-                Консалтинг по увеличению прибыли розничного бизнеса
+                Помощь по увеличению прибыли розничного бизнеса
               </p>
             </div>
             <div>
