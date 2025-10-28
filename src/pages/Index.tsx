@@ -718,7 +718,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">БизнесРост</h3>
+              <h3 className="text-xl font-bold mb-4">BizConsulting2.ru</h3>
               <p className="text-sm opacity-80">
                 Консалтинг по увеличению прибыли розничного бизнеса
               </p>
@@ -726,7 +726,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <div className="space-y-2 text-sm opacity-80">
-                <p>Email: info@biznesrost.ru</p>
+                <p>Email: info@bizconsulting2.ru</p>
                 <p>Телефон: +7 (999) 123-45-67</p>
               </div>
             </div>
@@ -739,7 +739,7 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-80">
-            © 2025 БизнесРост. Все права защищены.
+            © 2025 BizConsulting2.ru. Все права защищены.
           </div>
         </div>
       </footer>
