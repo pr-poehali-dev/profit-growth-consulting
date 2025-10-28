@@ -706,6 +706,9 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
             <a href="#results" className="text-sm hover:text-accent transition-colors">Результаты</a>
             <a href="#about" className="text-sm hover:text-accent transition-colors">Обо мне</a>
             <a href="#book" className="text-sm hover:text-accent transition-colors">Скачать</a>
+            <a href="#articles" className="text-sm hover:text-accent transition-colors">Статьи</a>
+            <a href="#video" className="text-sm hover:text-accent transition-colors">Видео</a>
+            <a href="#services" className="text-sm hover:text-accent transition-colors">Каталог услуг</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Контакты</a>
           </div>
         </div>
