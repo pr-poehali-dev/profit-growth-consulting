@@ -700,16 +700,16 @@ SMS/Email: "У вас 500 бонусов, сгорают через 5 дней".
       </main>
 
       <nav id="footer-menu" className="bg-card border-t border-border py-6">
-        <div className="container mx-auto px-4 flex items-center justify-center">
-          <div className="flex gap-8">
-            <a href="#services" className="text-sm hover:text-accent transition-colors">Услуги</a>
-            <a href="#results" className="text-sm hover:text-accent transition-colors">Результаты</a>
-            <a href="#about" className="text-sm hover:text-accent transition-colors">Обо мне</a>
-            <a href="#book" className="text-sm hover:text-accent transition-colors">Скачать</a>
-            <a href="#articles" className="text-sm hover:text-accent transition-colors">Статьи</a>
-            <a href="#video" className="text-sm hover:text-accent transition-colors">Видео</a>
-            <a href="#services" className="text-sm hover:text-accent transition-colors">Каталог услуг</a>
-            <a href="#contact" className="text-sm hover:text-accent transition-colors">Контакты</a>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-4 md:gap-8">
+            <a href="#services" className="text-sm hover:text-accent transition-colors text-center">Услуги</a>
+            <a href="#results" className="text-sm hover:text-accent transition-colors text-center">Результаты</a>
+            <a href="#about" className="text-sm hover:text-accent transition-colors text-center">Обо мне</a>
+            <a href="#book" className="text-sm hover:text-accent transition-colors text-center">Скачать</a>
+            <a href="#articles" className="text-sm hover:text-accent transition-colors text-center">Статьи</a>
+            <a href="#video" className="text-sm hover:text-accent transition-colors text-center">Видео</a>
+            <a href="#services" className="text-sm hover:text-accent transition-colors text-center">Каталог услуг</a>
+            <a href="#contact" className="text-sm hover:text-accent transition-colors text-center">Контакты</a>
           </div>
         </div>
       </nav>
